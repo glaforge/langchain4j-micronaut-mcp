@@ -20,11 +20,11 @@ import dev.langchain4j.mcp.client.DefaultMcpClient;
 import dev.langchain4j.mcp.client.McpClient;
 import dev.langchain4j.mcp.client.transport.McpTransport;
 import dev.langchain4j.mcp.client.transport.http.HttpMcpTransport;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.chat.listener.ChatModelListener;
 import dev.langchain4j.model.chat.listener.ChatModelRequestContext;
 import dev.langchain4j.model.chat.listener.ChatModelResponseContext;
 import dev.langchain4j.model.vertexai.VertexAiGeminiChatModel;
-import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolProvider;
 import io.micronaut.context.annotation.Property;
@@ -62,7 +62,7 @@ public class McpWeatherClientTest {
     EmbeddedServer server; // Inject the running server instance
 
     // --- Resources to be managed ---
-    private ChatLanguageModel model;
+    private ChatModel model;
     private McpTransport transport;
     private McpClient mcpClient;
     private WeatherAssistant weatherAssistant;
@@ -116,7 +116,7 @@ public class McpWeatherClientTest {
             .build();
 
         weatherAssistant = AiServices.builder(WeatherAssistant.class)
-            .chatLanguageModel(model)
+            .chatModel(model)
             .toolProvider(toolProvider)
             .build();
 

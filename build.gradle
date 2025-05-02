@@ -26,9 +26,9 @@ dependencies {
     // from the LangChain4j MCP client
     testImplementation("io.micronaut:micronaut-http-client")
     testImplementation 'com.google.auth:google-auth-library-credentials:1.28.0'
-    testImplementation("dev.langchain4j:langchain4j:1.0.0-beta3")
-    testImplementation("dev.langchain4j:langchain4j-mcp:1.0.0-beta3")
-    testImplementation("dev.langchain4j:langchain4j-vertex-ai-gemini:1.0.0-beta3")
+    testImplementation("dev.langchain4j:langchain4j:1.0.0-rc1")
+    testImplementation("dev.langchain4j:langchain4j-mcp:1.0.0-beta4")
+    testImplementation("dev.langchain4j:langchain4j-vertex-ai-gemini:1.0.0-beta4")
 }
 
 
