@@ -77,6 +77,6 @@ What it does:
 ---
 
 >[!NOTE]
-> This project is not an official project.
+> This project is not an official Google project.
 
 
